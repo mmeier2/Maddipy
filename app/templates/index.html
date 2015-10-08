@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <script type="text/javascript" src="static/js/jquery-1.11.3.min.js"></script>
+  </head>
+  <body>
+      <center><br><h1>Hello, welcome to {{ title }}!</h1>
+      <img src="static/images/log_in-desktop-large.png" id="login"></center>
+  </body>
+  <script type="text/javascript" src="static/js/app.js"></script> 
+  <script>
+      $(document).ready(function(){
+        $("#login").click(function(){
+          login();
+      });
+    });
+  </script>
+</html>
+

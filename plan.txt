@@ -1,0 +1,15 @@
+- method to create testing playlist (only called initially)
+-grab tropical house hoes
+- store songs that are already on 
+- grab all the artists that are on trop house hoes 
+  - find artists related artists 
+  - add them all to an artist list
+- search through their top songs
+  - if they arent already added, add then to the testing playlist
+  - also add to a text file
+
+
+- listen to songs
+    - delete any songs i dont like
+    - at the end add the remaining songs to trop house hoes
+

@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <script type="text/javascript" src="static/js/jquery-1.11.3.min.js"></script>
+  </head>
+  <body>
+    <link href='static/css/bootstrap-3.3.5-dist/css/bootstrap.min.css', rel='stylesheet'>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Maddipy</a>
+        </div>
+        <button class="btn btn-default navbar-btn navbar-right" id="signOut">Sign Out</button> 
+      </div>
+    </nav>
+    <div class="container theme-showcase" role="main">
+      <div class="jumbotron">
+        <br><br><br>
+        <center><h1>Hello {{ display_name }}!</h1>
+        <p>Please select the playlist you want us to base your new playlist on.</p>
+      
+        <div class='btn-group-vertical' role="group">
+        {% for playlist in playlists %}
+          <button type='button' id={{ playlist.id }} class="btn btn-primary">{{ playlist.name }}</button>
+        {% endfor %}
+        </div>
+      </center>
+      </div>
+    </div>
+    
+  </body>
+  <script>
+  $(document).ready(function(){
+        $(".btn").click(function(){
+          var name = "not found";
+          var playlists = "{{ names|safe }}";
+
+
+
+          alert(playlists);
+          duplicate_playlist(this.id, name);
+      });
+
+        $('#signOut').click(function(){
+          signOut();
+        })
+    });
+  </script>
+  <script type="text/javascript" src="static/js/app.js"></script> 
+</html>
